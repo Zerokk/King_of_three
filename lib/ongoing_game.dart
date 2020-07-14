@@ -27,8 +27,7 @@ class _OngoingGameState extends State<OngoingGame> {
   void turn() {
     if (_status == 'none') {
       _diceResult = rollDice();
-      // _ruleToShow = ruleManager.processDiceResult(_diceResult);
-      _ruleToShow = GameRulesNames.CreateRule;
+      _ruleToShow = ruleManager.processDiceResult(_diceResult);
     }
 
     _ruleDescription = ruleManager.getDescriptionForRule(_ruleToShow);
